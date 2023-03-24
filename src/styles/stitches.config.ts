@@ -72,5 +72,11 @@ export const { styled, getCssText, globalCss } = createStitches({
       lg: "20px",
       full: "99999px"
     }
+  },
+  media: {
+    base: "(max-width: 640px)",
+    sm: "(max-width: 768px)",
+    md: "(max-width: 1024px)",
+    lg: "(max-width: 1280px)"
   }
 });
