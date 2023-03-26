@@ -12,7 +12,7 @@ import {
 
 import logo from "../../assets/logo.svg";
 
-export default function Home() {
+export default function SignIn() {
   return (
     <>
       <Head>

@@ -5,7 +5,6 @@ export const Button = styled("button", {
 
   height: 72,
   maxWidth: 324,
-  width: "100%",
 
   padding: "0 $6",
   borderRadius: "8px",
@@ -22,9 +21,5 @@ export const Button = styled("button", {
   "&:hover": {
     filter: "brightness(0.8)",
     transition: "0.2s"
-  },
-
-  "@md": {
-    width: "unset"
   }
 });
