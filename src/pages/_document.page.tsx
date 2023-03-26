@@ -8,6 +8,8 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
+        <meta name="description" content="Book Wise" />
+
         <style
           id="stitches"
           dangerouslySetInnerHTML={{ __html: getCssText() }}
