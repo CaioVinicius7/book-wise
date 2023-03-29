@@ -4,7 +4,7 @@ import navbarBackgroundImage from "../../assets/navbar-background.png";
 
 export const NavBarContainer = styled("section", {
   maxWidth: 232,
-  height: "100vh",
+  height: "100%",
   background: "$gray700",
   borderRadius: "$md",
   backgroundImage: `url(${navbarBackgroundImage.src})`,
