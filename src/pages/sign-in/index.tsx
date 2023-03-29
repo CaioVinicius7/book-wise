@@ -23,7 +23,7 @@ export default function SignIn() {
 
       <SignInContainer>
         <SignInHero>
-          <Image src={logo} alt="" />
+          <Image src={logo} alt="Logo Book Wise" />
         </SignInHero>
 
         <main>
