@@ -1,6 +1,7 @@
 import Head from "next/head";
 
-import { Navbar } from "@/components/Navbar";
+import { DefaultLayout } from "@/components/DefaultLayout";
+import { Title } from "./styles";
 
 export default function Home() {
   return (
@@ -9,9 +10,9 @@ export default function Home() {
         <title>Book Wise | Home</title>
       </Head>
 
-      <main>
-        <Navbar />
-      </main>
+      <DefaultLayout variant="home">
+        <Title>Home</Title>
+      </DefaultLayout>
     </>
   );
 }
