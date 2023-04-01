@@ -1,7 +1,10 @@
 import Head from "next/head";
 
 import { DefaultLayout } from "@/components/DefaultLayout";
-import { Title } from "./styles";
+
+import { BooksContainer, HomeContainer } from "./styles";
+
+import { PopularBooksSidebar } from "./components/PopularBooksSidebar";
 
 export default function Home() {
   return (
@@ -11,7 +14,13 @@ export default function Home() {
       </Head>
 
       <DefaultLayout variant="home">
-        <Title>Home</Title>
+        <HomeContainer>
+          <BooksContainer>
+            <h2>Avaliações mais recentes</h2>
+          </BooksContainer>
+
+          <PopularBooksSidebar />
+        </HomeContainer>
       </DefaultLayout>
     </>
   );
