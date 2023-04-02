@@ -3,6 +3,8 @@ import { Nunito } from "next/font/google";
 
 import { globalStyles } from "@/styles/global";
 
+import "../lib/dayjs";
+
 const nunito = Nunito({
   variable: "--nunito-font",
   subsets: ["latin"]
