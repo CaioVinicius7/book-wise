@@ -20,6 +20,7 @@ interface BookReviewCardProps {
   bookCoverImageUrl: string;
   bookName: string;
   bookAuthor: string;
+  rating: number;
   review: string;
 }
 
@@ -30,6 +31,7 @@ export function BookReviewCard({
   bookCoverImageUrl,
   bookName,
   bookAuthor,
+  rating,
   review
 }: BookReviewCardProps) {
   const [showMore, setShowMore] = useState(false);
@@ -53,7 +55,7 @@ export function BookReviewCard({
           </div>
         </div>
 
-        <Rating size={20} fillColor="#8381D9" initialValue={4} readonly />
+        <Rating size={20} fillColor="#8381D9" initialValue={rating} readonly />
       </BookReviewCardHeader>
 
       <BookReviewCardContent>

@@ -34,6 +34,7 @@ export default function Home() {
                 bookCoverImageUrl={`/o-hobbit.png`}
                 bookName="O Hobbit"
                 bookAuthor="J.R.R. Tolkien"
+                rating={4}
                 review={bookReview}
               />
 
@@ -41,9 +42,10 @@ export default function Home() {
                 avatarImageUrl="https://github.com/caiovinicius7.png"
                 userName="Caio Vinícius"
                 reviewedAt={new Date()}
-                bookCoverImageUrl={`/o-hobbit.png`}
-                bookName="O Hobbit"
-                bookAuthor="J.R.R. Tolkien"
+                bookCoverImageUrl={`/codigo-limpo.png`}
+                bookName="Código limpo"
+                bookAuthor="Robert C. Martin"
+                rating={5}
                 review={shortBookReview}
               />
 
@@ -54,6 +56,7 @@ export default function Home() {
                 bookCoverImageUrl={`/o-hobbit.png`}
                 bookName="O Hobbit"
                 bookAuthor="J.R.R. Tolkien"
+                rating={4}
                 review={bookReview}
               />
 
@@ -61,9 +64,10 @@ export default function Home() {
                 avatarImageUrl="https://github.com/caiovinicius7.png"
                 userName="Caio Vinícius"
                 reviewedAt={new Date()}
-                bookCoverImageUrl={`/o-hobbit.png`}
-                bookName="O Hobbit"
-                bookAuthor="J.R.R. Tolkien"
+                bookCoverImageUrl={`/codigo-limpo.png`}
+                bookName="Código limpo"
+                bookAuthor="Robert C. Martin"
+                rating={5}
                 review={shortBookReview}
               />
             </section>
