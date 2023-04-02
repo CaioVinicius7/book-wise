@@ -9,5 +9,13 @@ export const DefaultLayoutContainer = styled("div", {
 
 export const ContentContainer = styled("div", {
   flex: 1,
-  padding: "52px 96px"
+  padding: "52px 96px",
+
+  "@lg": {
+    padding: "36px 24px"
+  },
+
+  "@sm": {
+    padding: "36px 0px"
+  }
 });
