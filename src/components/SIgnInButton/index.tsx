@@ -10,6 +10,7 @@ type SignInProviders = "google" | "github" | "visitor";
 
 interface SignInButtonProps {
   variant: SignInProviders;
+  onClick: () => void;
 }
 
 interface SignInButtonOptions {
@@ -32,9 +33,9 @@ const SignInProviderProps: Record<SignInProviders, SignInButtonOptions> = {
   }
 };
 
-export function SignInButton({ variant }: SignInButtonProps) {
+export function SignInButton({ variant, onClick }: SignInButtonProps) {
   return (
-    <Button>
+    <Button onClick={onClick}>
       <Image src={SignInProviderProps[variant].icon} alt={`${variant} icon`} />
 
       {SignInProviderProps[variant].text}
