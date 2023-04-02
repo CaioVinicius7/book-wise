@@ -41,12 +41,15 @@ export function Navbar() {
                 Explorar
               </Link>
             </NavigationListItem>
-            <NavigationListItem currentPage={false}>
-              <Link href="#">
-                <User size={DEFAULT_ICONS_SIZE} />
-                Perfil
-              </Link>
-            </NavigationListItem>
+
+            {userIsLogged && (
+              <NavigationListItem currentPage={false}>
+                <Link href="#">
+                  <User size={DEFAULT_ICONS_SIZE} />
+                  Perfil
+                </Link>
+              </NavigationListItem>
+            )}
           </NavigationList>
         </NavigationContainer>
       </div>
