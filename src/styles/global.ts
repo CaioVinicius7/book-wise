@@ -4,7 +4,21 @@ export const globalStyles = globalCss({
   "*": {
     margin: 0,
     padding: 0,
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+
+    "&::-webkit-scrollbar": {
+      width: 6,
+      marginLeft: "$10"
+    },
+
+    "&::-webkit-scrollbar-track": {
+      background: "$gray700"
+    },
+
+    "&::-webkit-scrollbar-thumb": {
+      borderRadius: 20,
+      border: "3px solid $gray600"
+    }
   },
 
   body: {

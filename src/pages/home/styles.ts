@@ -14,6 +14,9 @@ export const BooksReviewContainer = styled("main", {
   flex: 1,
   height: "100%",
 
+  overflow: "auto",
+  paddingRight: 6,
+
   section: {
     display: "flex",
     flexDirection: "column",

@@ -23,7 +23,29 @@ export default function Home() {
         <HomeContainer>
           <BooksReviewContainer>
             <section>
-              <h2>Avaliações mais recentes</h2>
+              <header>
+                <h2>Avaliações mais recentes</h2>
+              </header>
+
+              <BookReviewCard
+                avatarImageUrl="https://github.com/caiovinicius7.png"
+                userName="Caio Vinícius"
+                reviewedAt={new Date()}
+                bookCoverImageUrl={`/o-hobbit.png`}
+                bookName="O Hobbit"
+                bookAuthor="J.R.R. Tolkien"
+                review={bookReview}
+              />
+
+              <BookReviewCard
+                avatarImageUrl="https://github.com/caiovinicius7.png"
+                userName="Caio Vinícius"
+                reviewedAt={new Date()}
+                bookCoverImageUrl={`/o-hobbit.png`}
+                bookName="O Hobbit"
+                bookAuthor="J.R.R. Tolkien"
+                review={shortBookReview}
+              />
 
               <BookReviewCard
                 avatarImageUrl="https://github.com/caiovinicius7.png"
