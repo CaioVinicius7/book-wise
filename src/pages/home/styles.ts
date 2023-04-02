@@ -10,11 +10,18 @@ export const HomeContainer = styled("main", {
   gap: 64
 });
 
-export const BooksContainer = styled("main", {
+export const BooksReviewContainer = styled("main", {
   flex: 1,
   height: "100%",
 
-  h2: {
-    fontSize: "0.875rem"
+  section: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "$3",
+
+    h2: {
+      fontSize: "0.875rem",
+      marginBottom: "$1"
+    }
   }
 });
