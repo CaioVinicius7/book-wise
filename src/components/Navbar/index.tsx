@@ -1,20 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChartLineUp, Binoculars, User, SignIn } from "phosphor-react";
+import { ChartLineUp, Binoculars, User, SignIn, SignOut } from "phosphor-react";
 
 import {
   NavBarContainer,
   NavigationContainer,
   NavigationList,
   NavigationListItem,
-  SignInButton
+  SignInButton,
+  SignOutButton
 } from "./styles";
 
 import logo from "../../assets/logo.svg";
+import { useState } from "react";
+import { Avatar } from "../Avatar";
 
 const DEFAULT_ICONS_SIZE = 24;
 
 export function Navbar() {
+  const [userIsLogged, setUserIsLogged] = useState(false);
+
   return (
     <NavBarContainer>
       <div>
@@ -47,10 +52,18 @@ export function Navbar() {
       </div>
 
       <footer>
-        <SignInButton>
-          Fazer Login
-          <SignIn size={20} weight="bold" />
-        </SignInButton>
+        {userIsLogged ? (
+          <SignOutButton onClick={() => setUserIsLogged((state) => !state)}>
+            <Avatar imageUrl="https://github.com/caiovinicius7.png" size="sm" />
+            Caio
+            <SignOut size={20} weight="bold" />
+          </SignOutButton>
+        ) : (
+          <SignInButton onClick={() => setUserIsLogged((state) => !state)}>
+            Fazer Login
+            <SignIn size={20} weight="bold" />
+          </SignInButton>
+        )}
       </footer>
     </NavBarContainer>
   );

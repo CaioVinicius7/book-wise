@@ -93,12 +93,11 @@ export const NavigationListItem = styled("li", {
   }
 });
 
-export const SignInButton = styled("button", {
+const Button = styled("button", {
   all: "unset",
 
   cursor: "pointer",
 
-  fontWeight: "$bold",
   color: "$gray200",
 
   display: "flex",
@@ -107,11 +106,21 @@ export const SignInButton = styled("button", {
 
   transition: "0.2s",
 
-  svg: {
-    color: "$green100"
-  },
-
   "&:hover": {
     filter: "brightness(0.8)"
+  }
+});
+
+export const SignInButton = styled(Button, {
+  fontWeight: "$bold",
+
+  svg: {
+    color: "$green100"
+  }
+});
+
+export const SignOutButton = styled(Button, {
+  svg: {
+    color: "$red100"
   }
 });
