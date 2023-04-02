@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { SignInButton } from "@/components/SIgnInButton";
 
@@ -13,6 +14,8 @@ import {
 import logo from "../../assets/logo.svg";
 
 export default function SignIn() {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -34,9 +37,12 @@ export default function SignIn() {
             </div>
 
             <SignInOptions>
-              <SignInButton variant="google" />
-              <SignInButton variant="github" />
-              <SignInButton variant="visitor" />
+              <SignInButton variant="google" onClick={() => {}} />
+              <SignInButton variant="github" onClick={() => {}} />
+              <SignInButton
+                variant="visitor"
+                onClick={() => router.push("/home")}
+              />
             </SignInOptions>
           </SignInBox>
         </main>
