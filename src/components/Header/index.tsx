@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { Binoculars, ChartLineUp, User } from "phosphor-react";
 
 import { HeaderContainer } from "./styles";
+import { SearchInput } from "../SearchInput";
 
 type HeaderVariants = "home" | "explore" | "profile";
 
@@ -31,11 +32,21 @@ const headerVariant: Record<HeaderVariants, HeaderOptions> = {
 
 export function Header({ variant }: HeaderProps) {
   return (
-    <HeaderContainer>
+    <HeaderContainer placeholder="Buscar livro ou autor">
       <h1>
         {headerVariant[variant].icon}
         {headerVariant[variant].title}
       </h1>
+
+      {variant === "explore" && (
+        <SearchInput
+          placeholder="Buscar livro ou autor"
+          sizeVariant="header"
+          onSearch={() => {
+            alert("Search completed");
+          }}
+        />
+      )}
     </HeaderContainer>
   );
 }

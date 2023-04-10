@@ -1,6 +1,10 @@
 import { styled } from "@/styles/stitches.config";
 
 export const HeaderContainer = styled("header", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+
   h1: {
     color: "$gray100",
     fontSize: "$2xl",
