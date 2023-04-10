@@ -33,13 +33,13 @@ export function Navbar() {
         <NavigationContainer>
           <NavigationList>
             <NavigationListItem currentPage={asPath === "/home"}>
-              <Link href="#">
+              <Link href="/home">
                 <ChartLineUp size={DEFAULT_ICONS_SIZE} />
                 Início
               </Link>
             </NavigationListItem>
             <NavigationListItem currentPage={asPath === "/explore"}>
-              <Link href="#">
+              <Link href="/explore">
                 <Binoculars size={DEFAULT_ICONS_SIZE} />
                 Explorar
               </Link>
@@ -47,7 +47,7 @@ export function Navbar() {
 
             {userIsLogged && (
               <NavigationListItem currentPage={asPath === "/profile"}>
-                <Link href="#">
+                <Link href="/profile">
                   <User size={DEFAULT_ICONS_SIZE} />
                   Perfil
                 </Link>
