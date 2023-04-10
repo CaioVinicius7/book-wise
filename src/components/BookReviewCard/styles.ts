@@ -27,7 +27,7 @@ export const BookReviewCardHeader = styled("header", {
         lineHeight: "$base"
       },
 
-      span: {
+      time: {
         display: "block",
         fontSize: "$sm",
         color: "$gray400",

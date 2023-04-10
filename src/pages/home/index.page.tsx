@@ -30,7 +30,7 @@ export default function Home() {
               <BookReviewCard
                 avatarImageUrl="https://github.com/caiovinicius7.png"
                 userName="Caio Vinícius"
-                reviewedAt={new Date()}
+                reviewedAt={new Date().toISOString()}
                 bookCoverImageUrl={`/o-hobbit.png`}
                 bookName="O Hobbit"
                 bookAuthor="J.R.R. Tolkien"
@@ -41,7 +41,7 @@ export default function Home() {
               <BookReviewCard
                 avatarImageUrl="https://github.com/caiovinicius7.png"
                 userName="Caio Vinícius"
-                reviewedAt={new Date()}
+                reviewedAt={new Date().toISOString()}
                 bookCoverImageUrl={`/codigo-limpo.png`}
                 bookName="Código limpo"
                 bookAuthor="Robert C. Martin"
@@ -52,7 +52,7 @@ export default function Home() {
               <BookReviewCard
                 avatarImageUrl="https://github.com/caiovinicius7.png"
                 userName="Caio Vinícius"
-                reviewedAt={new Date()}
+                reviewedAt={new Date().toISOString()}
                 bookCoverImageUrl={`/o-hobbit.png`}
                 bookName="O Hobbit"
                 bookAuthor="J.R.R. Tolkien"
@@ -63,7 +63,7 @@ export default function Home() {
               <BookReviewCard
                 avatarImageUrl="https://github.com/caiovinicius7.png"
                 userName="Caio Vinícius"
-                reviewedAt={new Date()}
+                reviewedAt={new Date().toISOString()}
                 bookCoverImageUrl={`/codigo-limpo.png`}
                 bookName="Código limpo"
                 bookAuthor="Robert C. Martin"

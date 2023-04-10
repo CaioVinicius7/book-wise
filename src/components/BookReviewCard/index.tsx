@@ -16,7 +16,7 @@ import { Avatar } from "../Avatar";
 interface BookReviewCardProps {
   avatarImageUrl: string;
   userName: string;
-  reviewedAt: Date;
+  reviewedAt: string;
   bookCoverImageUrl: string;
   bookName: string;
   bookAuthor: string;
@@ -51,7 +51,7 @@ export function BookReviewCard({
 
           <div>
             <strong>{userName}</strong>
-            <span>{reviewDistanceToNow}</span>
+            <time dateTime={reviewedAt}>{reviewDistanceToNow}</time>
           </div>
         </div>
 
