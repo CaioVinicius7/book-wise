@@ -42,9 +42,7 @@ export const NavigationList = styled("ul", {
 
   display: "flex",
   flexDirection: "column",
-  gap: "$6",
-
-  li: {}
+  gap: "$6"
 });
 
 export const NavigationListItem = styled("li", {

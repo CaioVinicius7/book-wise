@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { ChartLineUp, Binoculars, User, SignIn, SignOut } from "phosphor-react";
 
 import {
@@ -20,6 +21,8 @@ const DEFAULT_ICONS_SIZE = 24;
 export function Navbar() {
   const [userIsLogged, setUserIsLogged] = useState(false);
 
+  const { asPath } = useRouter();
+
   return (
     <NavBarContainer>
       <div>
@@ -29,13 +32,13 @@ export function Navbar() {
 
         <NavigationContainer>
           <NavigationList>
-            <NavigationListItem currentPage={true}>
+            <NavigationListItem currentPage={asPath === "/home"}>
               <Link href="#">
                 <ChartLineUp size={DEFAULT_ICONS_SIZE} />
                 Início
               </Link>
             </NavigationListItem>
-            <NavigationListItem currentPage={false}>
+            <NavigationListItem currentPage={asPath === "/explore"}>
               <Link href="#">
                 <Binoculars size={DEFAULT_ICONS_SIZE} />
                 Explorar
@@ -43,7 +46,7 @@ export function Navbar() {
             </NavigationListItem>
 
             {userIsLogged && (
-              <NavigationListItem currentPage={false}>
+              <NavigationListItem currentPage={asPath === "/profile"}>
                 <Link href="#">
                   <User size={DEFAULT_ICONS_SIZE} />
                   Perfil
