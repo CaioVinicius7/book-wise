@@ -1,7 +1,13 @@
-import { DefaultLayout } from "@/components/DefaultLayout";
+import { useState } from "react";
 import Head from "next/head";
 
+import { DefaultLayout } from "@/components/DefaultLayout";
+
+import { Categories } from "./components/Categories";
+
 export default function Explore() {
+  const [selectedCategory, setSelectedCategory] = useState("Tudo");
+
   return (
     <>
       <Head>
@@ -9,7 +15,10 @@ export default function Explore() {
       </Head>
 
       <DefaultLayout variant="explore">
-        <h1>Explore</h1>
+        <Categories
+          selectedCategory={selectedCategory}
+          onSelectCategory={setSelectedCategory}
+        />
       </DefaultLayout>
     </>
   );
