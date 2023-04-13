@@ -22,7 +22,11 @@ export const SearchInputContainer = styled("div", {
     sizeVariant: {
       header: {
         maxWidth: 448,
-        width: "100%"
+        width: "100%",
+
+        "@md": {
+          display: "none"
+        }
       },
       body: {
         width: "100%"
