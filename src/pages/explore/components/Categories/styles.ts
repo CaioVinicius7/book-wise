@@ -33,19 +33,19 @@ export const CategoryTag = styled("button", {
 
   "&:hover": {
     color: "$gray100",
-    backgroundColor: "$purple100"
+    backgroundColor: "$purple200",
+    borderColor: "$purple200"
   },
 
   variants: {
     selected: {
       true: {
         color: "$gray100",
-        border: "1px solid $purple200",
+        borderColor: "$purple200",
         backgroundColor: "$purple200",
 
         "&:hover": {
-          borderColor: "$purple100",
-          backgroundColor: "$purple200"
+          borderColor: "$purple100"
         }
       }
     }
