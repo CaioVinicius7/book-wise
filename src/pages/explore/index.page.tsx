@@ -8,7 +8,14 @@ import { BookList } from "./components/BookList";
 
 import { ExploreContainer } from "./styles";
 
-const books = [
+export interface BookSummary {
+  title: string;
+  author: string;
+  rating: number;
+  coverImageUrl: string;
+}
+
+const books: BookSummary[] = [
   {
     title: "Código Limpo",
     author: "Robert C. Martin",

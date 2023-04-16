@@ -1,19 +1,8 @@
-import Image from "next/image";
-import { Rating } from "react-simple-star-rating";
+import { BookSummaryCard } from "../BookSummaryCard";
 
-import {
-  BookListContainer,
-  BookSummaryCard,
-  BookSummaryCardContent
-} from "./styles";
+import type { BookSummary } from "../../index.page";
 
-interface BookSummary {
-  title: string;
-  author: string;
-  rating: number;
-  coverImageUrl: string;
-}
-
+import { BookListContainer } from "./styles";
 interface BookListProps {
   bookList: BookSummary[];
 }
@@ -28,30 +17,13 @@ export function BookList({ bookList }: BookListProps) {
   return (
     <BookListContainer>
       {bookList.map((book) => (
-        <BookSummaryCard key={book.title}>
-          <Image
-            src={book.coverImageUrl}
-            width={108}
-            height={152}
-            alt="Capa do livro"
-          />
-
-          <BookSummaryCardContent>
-            <header>
-              <strong>{book.title}</strong>
-              <span>{book.author}</span>
-            </header>
-
-            <footer>
-              <Rating
-                size={20}
-                fillColor="#8381D9"
-                initialValue={book.rating}
-                readonly
-              />
-            </footer>
-          </BookSummaryCardContent>
-        </BookSummaryCard>
+        <BookSummaryCard
+          key={book.title}
+          title={book.title}
+          author={book.author}
+          rating={book.rating}
+          coverImageUrl={book.coverImageUrl}
+        />
       ))}
     </BookListContainer>
   );
