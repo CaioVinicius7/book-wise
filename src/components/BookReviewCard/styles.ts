@@ -8,7 +8,11 @@ export const BookReviewCardContainer = styled("article", {
 
   display: "flex",
   flexDirection: "column",
-  gap: "$8"
+  gap: "$8",
+
+  img: {
+    borderRadius: "$sm"
+  }
 });
 
 export const BookReviewCardHeader = styled("header", {
