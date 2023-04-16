@@ -1,13 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import notFoundImage from "../../assets/404.png";
 
 import { NotFoundContainer } from "./styles";
-import Link from "next/link";
 
 export default function NotFound() {
   return (
     <NotFoundContainer>
       <Image
-        src="/404.png"
+        src={notFoundImage}
         width={600}
         height={400}
         alt="Página não encontrada"
