@@ -28,7 +28,7 @@ export const ContentContainer = styled("div", {
         overflow: "unset"
       },
       explore: {
-        overflowX: "hidden"
+        overflow: "hidden"
       }
     }
   }

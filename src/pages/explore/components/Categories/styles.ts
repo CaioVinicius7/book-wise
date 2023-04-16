@@ -1,10 +1,9 @@
 import { styled } from "@/styles/stitches.config";
 
 export const CategoriesContainer = styled("div", {
-  marginTop: "3rem",
-  paddingBottom: "$2",
+  minHeight: 44,
 
-  overflow: "auto",
+  overflowX: "auto",
 
   display: "flex",
   alignItems: "center",
