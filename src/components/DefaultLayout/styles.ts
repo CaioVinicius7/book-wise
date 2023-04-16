@@ -17,5 +17,19 @@ export const ContentContainer = styled("div", {
 
   "@sm": {
     padding: "36px 0px"
+  },
+
+  variants: {
+    page: {
+      home: {
+        overflow: "unset"
+      },
+      profile: {
+        overflow: "unset"
+      },
+      explore: {
+        overflowX: "hidden"
+      }
+    }
   }
 });

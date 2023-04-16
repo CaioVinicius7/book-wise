@@ -14,7 +14,7 @@ export function DefaultLayout({ variant, children }: DefaultLayoutProps) {
     <DefaultLayoutContainer>
       <Navbar />
 
-      <ContentContainer>
+      <ContentContainer page={variant}>
         <Header variant={variant} />
 
         {children}
