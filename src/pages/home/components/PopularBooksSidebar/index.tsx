@@ -10,7 +10,7 @@ export function PopularBooksSidebar() {
       <header>
         <h2>Livros populares</h2>
 
-        <Link href="#">
+        <Link href="/explore">
           Ver todos
           <CaretRight size={16} weight="bold" />
         </Link>
