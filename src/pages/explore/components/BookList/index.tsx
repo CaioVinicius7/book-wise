@@ -1,8 +1,10 @@
 import { BookSummaryCard } from "../BookSummaryCard";
 
-import type { BookSummary } from "../../index.page";
+import { BooksNotFound } from "../BooksNotFound";
 
 import { BookListContainer } from "./styles";
+
+import type { BookSummary } from "../../index.page";
 interface BookListProps {
   bookList: BookSummary[];
 }
@@ -11,7 +13,7 @@ export function BookList({ bookList }: BookListProps) {
   const bookListIsEmpty = bookList.length === 0;
 
   if (bookListIsEmpty) {
-    return <h1>Nenhum livro encontrado!</h1>;
+    return <BooksNotFound />;
   }
 
   return (
