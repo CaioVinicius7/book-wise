@@ -11,8 +11,6 @@ export const ContentContainer = styled("div", {
   flex: 1,
   padding: "52px 96px",
 
-  overflowX: "hidden",
-
   "@lg": {
     padding: "36px 24px"
   },
