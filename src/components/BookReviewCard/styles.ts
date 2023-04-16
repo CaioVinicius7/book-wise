@@ -8,11 +8,7 @@ export const BookReviewCardContainer = styled("article", {
 
   display: "flex",
   flexDirection: "column",
-  gap: "$8",
-
-  img: {
-    borderRadius: "$sm"
-  }
+  gap: "$8"
 });
 
 export const BookReviewCardHeader = styled("header", {
@@ -51,6 +47,10 @@ export const BookReviewCardContent = styled("div", {
     lineHeight: "$base",
     textOverflow: "ellipsis",
     overflow: "hidden"
+  },
+
+  img: {
+    borderRadius: "$sm"
   }
 });
 
