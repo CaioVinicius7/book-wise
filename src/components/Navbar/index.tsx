@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ChartLineUp, Binoculars, User, SignIn, SignOut } from "phosphor-react";
+import * as Dialog from "@radix-ui/react-dialog";
 
 import {
   NavBarContainer,
@@ -12,14 +14,15 @@ import {
   SignOutButton
 } from "./styles";
 
-import logo from "../../assets/logo.svg";
-import { useState } from "react";
+import { SignInModal } from "../SignInModal";
 import { Avatar } from "../Avatar";
+
+import logo from "../../assets/logo.svg";
 
 const DEFAULT_ICONS_SIZE = 24;
 
 export function Navbar() {
-  const [userIsLogged, setUserIsLogged] = useState(false);
+  const userIsLogged = false;
 
   const { asPath } = useRouter();
 
@@ -59,16 +62,21 @@ export function Navbar() {
 
       <footer>
         {userIsLogged ? (
-          <SignOutButton onClick={() => setUserIsLogged((state) => !state)}>
+          <SignOutButton>
             <Avatar imageUrl="https://github.com/caiovinicius7.png" size="sm" />
             Caio
             <SignOut size={20} weight="bold" />
           </SignOutButton>
         ) : (
-          <SignInButton onClick={() => setUserIsLogged((state) => !state)}>
-            Fazer Login
-            <SignIn size={20} weight="bold" />
-          </SignInButton>
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <SignInButton>
+                Fazer Login
+                <SignIn size={20} weight="bold" />
+              </SignInButton>
+            </Dialog.Trigger>
+            <SignInModal />
+          </Dialog.Root>
         )}
       </footer>
     </NavBarContainer>
