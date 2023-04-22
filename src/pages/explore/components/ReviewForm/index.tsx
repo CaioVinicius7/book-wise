@@ -12,7 +12,11 @@ import {
   ReviewFormHeader
 } from "./styles";
 
-export function ReviewForm() {
+interface ReviewFormProps {
+  onCancelReview(): void;
+}
+
+export function ReviewForm({ onCancelReview }: ReviewFormProps) {
   return (
     <ReviewFormContainer>
       <ReviewFormHeader>
@@ -28,7 +32,11 @@ export function ReviewForm() {
         <Textarea characterLimit={450} showCounter />
 
         <div>
-          <ResetButton type="reset" title="Excluir texto digitado">
+          <ResetButton
+            type="button"
+            title="Cancelar review"
+            onClick={onCancelReview}
+          >
             <X size={24} />
           </ResetButton>
 

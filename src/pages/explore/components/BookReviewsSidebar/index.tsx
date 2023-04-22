@@ -20,6 +20,10 @@ interface BookReviewsSidebarProps {
 export function BookReviewsSidebar({ onClose }: BookReviewsSidebarProps) {
   const [reviewFormIsVisible, setReviewFormIsVisible] = useState(false);
 
+  function handleChangeFormReviewVisibility() {
+    setReviewFormIsVisible((state) => !state);
+  }
+
   return (
     <BookReviewsSidebarContainer>
       <CloseButton title="Fechar barra lateral" type="button" onClick={onClose}>
@@ -37,12 +41,12 @@ export function BookReviewsSidebar({ onClose }: BookReviewsSidebarProps) {
       <ReviewsContainer>
         <ReviewsHeader>
           <span>Avaliações</span>
-          <button onClick={() => setReviewFormIsVisible((state) => !state)}>
-            Avaliar
-          </button>
+          <button onClick={handleChangeFormReviewVisibility}>Avaliar</button>
         </ReviewsHeader>
 
-        {reviewFormIsVisible && <ReviewForm />}
+        {reviewFormIsVisible && (
+          <ReviewForm onCancelReview={handleChangeFormReviewVisibility} />
+        )}
 
         <BookReviewCard
           avatarImageUrl="https://github.com/caiovinicius7.png"
