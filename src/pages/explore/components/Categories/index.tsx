@@ -2,7 +2,7 @@ import { CategoriesContainer, CategoryTag } from "./styles";
 
 interface CategoriesProps {
   selectedCategory: string;
-  onSelectCategory: (category: string) => void;
+  onSelectCategory(category: string): void;
 }
 
 const categories = [

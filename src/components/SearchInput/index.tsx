@@ -5,7 +5,7 @@ import { Input, SearchButton, SearchInputContainer } from "./styles";
 
 interface SearchInputProps extends InputHTMLAttributes<HTMLInputElement> {
   sizeVariant: "header" | "body";
-  onSearch: () => void;
+  onSearch(): void;
 }
 
 export function SearchInput({
