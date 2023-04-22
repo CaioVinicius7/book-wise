@@ -7,7 +7,7 @@ import { BookListContainer } from "./styles";
 import type { BookSummary } from "../../index.page";
 interface BookListProps {
   bookList: BookSummary[];
-  onSelectBook: (selectedBook: string) => void;
+  onSelectBook(selectedBook: string): void;
 }
 
 export function BookList({ bookList, onSelectBook }: BookListProps) {
