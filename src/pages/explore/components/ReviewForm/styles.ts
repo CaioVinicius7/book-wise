@@ -1,4 +1,13 @@
-import { styled } from "@/styles/stitches.config";
+import { keyframes, styled } from "@/styles/stitches.config";
+
+const entrance = keyframes({
+  from: {
+    translate: "100%"
+  },
+  to: {
+    translate: "0%"
+  }
+});
 
 export const ReviewFormContainer = styled("div", {
   padding: "$6",
@@ -7,7 +16,9 @@ export const ReviewFormContainer = styled("div", {
   borderRadius: 8,
 
   display: "grid",
-  gap: "$6"
+  gap: "$6",
+
+  animation: `${entrance} 0.4s`
 });
 
 export const ReviewFormHeader = styled("header", {
