@@ -16,7 +16,7 @@ export const TextareaElement = styled("textarea", {
   color: "$gray400",
   fontSize: "$sm",
 
-  border: "1px solid $green200",
+  border: "1px solid $gray500",
   borderRadius: 4,
 
   "&:focus": {
