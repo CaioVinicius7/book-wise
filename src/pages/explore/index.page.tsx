@@ -5,6 +5,7 @@ import { DefaultLayout } from "@/components/DefaultLayout";
 
 import { Categories } from "./components/Categories";
 import { BookList } from "./components/BookList";
+import { BookReviewsSidebar } from "./components/BookReviewsSidebar";
 
 import { ExploreContainer } from "./styles";
 
@@ -50,6 +51,13 @@ const books: BookSummary[] = [
 
 export default function Explore() {
   const [selectedCategory, setSelectedCategory] = useState("Tudo");
+  const [selectedBook, setSelectedBook] = useState<string | null>(null);
+
+  const sidebarShouldBeOpen = !!selectedBook;
+
+  function deselectBook() {
+    setSelectedBook(null);
+  }
 
   return (
     <>
@@ -64,7 +72,9 @@ export default function Explore() {
             onSelectCategory={setSelectedCategory}
           />
 
-          <BookList bookList={books} />
+          <BookList bookList={books} onSelectBook={setSelectedBook} />
+
+          {sidebarShouldBeOpen && <BookReviewsSidebar onClose={deselectBook} />}
         </ExploreContainer>
       </DefaultLayout>
     </>

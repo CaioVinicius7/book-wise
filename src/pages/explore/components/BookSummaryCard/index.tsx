@@ -12,6 +12,7 @@ import {
 
 interface BookSummaryCardProps extends BookSummary {
   variant?: "list" | "sidebar";
+  onSelectBook?(selectedBook: string): void;
 }
 
 export function BookSummaryCard({
@@ -19,7 +20,8 @@ export function BookSummaryCard({
   author,
   rating,
   coverImageUrl,
-  variant = "list"
+  variant = "list",
+  onSelectBook
 }: BookSummaryCardProps) {
   const isListVariant = variant === "list";
 
@@ -27,8 +29,20 @@ export function BookSummaryCard({
     width: isListVariant ? 108 : 170,
     height: isListVariant ? 152 : 242
   };
+
+  function handleSelectBook() {
+    if (!onSelectBook) {
+      return;
+    }
+
+    onSelectBook(title);
+  }
+
   return (
-    <BookSummaryCardContainer isListVariant={isListVariant}>
+    <BookSummaryCardContainer
+      isListVariant={isListVariant}
+      onClick={handleSelectBook}
+    >
       <BookSummaryCardContent>
         <Image
           src={coverImageUrl}

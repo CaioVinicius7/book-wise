@@ -7,9 +7,10 @@ import { BookListContainer } from "./styles";
 import type { BookSummary } from "../../index.page";
 interface BookListProps {
   bookList: BookSummary[];
+  onSelectBook: (selectedBook: string) => void;
 }
 
-export function BookList({ bookList }: BookListProps) {
+export function BookList({ bookList, onSelectBook }: BookListProps) {
   const bookListIsEmpty = bookList.length === 0;
 
   if (bookListIsEmpty) {
@@ -25,6 +26,7 @@ export function BookList({ bookList }: BookListProps) {
           author={book.author}
           rating={book.rating}
           coverImageUrl={book.coverImageUrl}
+          onSelectBook={onSelectBook}
         />
       ))}
     </BookListContainer>
