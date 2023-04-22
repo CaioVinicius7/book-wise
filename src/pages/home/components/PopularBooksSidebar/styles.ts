@@ -1,4 +1,13 @@
-import { styled } from "@/styles/stitches.config";
+import { keyframes, styled } from "@/styles/stitches.config";
+
+const entrance = keyframes({
+  from: {
+    translate: "100%"
+  },
+  to: {
+    translate: "0%"
+  }
+});
 
 export const PopularBooksSidebarContainer = styled("aside", {
   width: 324,
@@ -6,6 +15,8 @@ export const PopularBooksSidebarContainer = styled("aside", {
   display: "flex",
   flexDirection: "column",
   gap: "$4",
+
+  animation: `${entrance} 0.6s`,
 
   header: {
     display: "flex",

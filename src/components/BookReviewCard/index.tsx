@@ -22,6 +22,7 @@ interface BookReviewCardProps {
   bookAuthor: string;
   rating: number;
   review: string;
+  animate?: boolean;
 }
 
 export function BookReviewCard({
@@ -32,7 +33,8 @@ export function BookReviewCard({
   bookName,
   bookAuthor,
   rating,
-  review
+  review,
+  animate = false
 }: BookReviewCardProps) {
   const [showMore, setShowMore] = useState(false);
 
@@ -44,7 +46,7 @@ export function BookReviewCard({
     : review;
 
   return (
-    <BookReviewCardContainer>
+    <BookReviewCardContainer animate={animate}>
       <BookReviewCardHeader>
         <div>
           <Avatar imageUrl={avatarImageUrl} size="md" />

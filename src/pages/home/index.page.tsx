@@ -36,6 +36,7 @@ export default function Home() {
                 bookAuthor="J.R.R. Tolkien"
                 rating={4}
                 review={bookReview}
+                animate
               />
 
               <BookReviewCard
@@ -47,6 +48,7 @@ export default function Home() {
                 bookAuthor="Robert C. Martin"
                 rating={5}
                 review={shortBookReview}
+                animate
               />
 
               <BookReviewCard
@@ -58,6 +60,7 @@ export default function Home() {
                 bookAuthor="J.R.R. Tolkien"
                 rating={4}
                 review={bookReview}
+                animate
               />
 
               <BookReviewCard
@@ -69,6 +72,7 @@ export default function Home() {
                 bookAuthor="Robert C. Martin"
                 rating={5}
                 review={shortBookReview}
+                animate
               />
             </section>
           </BooksReviewContainer>

@@ -5,6 +5,7 @@ export const HomeContainer = styled("main", {
   paddingTop: "$10",
 
   overflow: "auto",
+  overflowX: "hidden",
 
   display: "flex",
   gap: 64
