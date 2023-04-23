@@ -16,7 +16,7 @@ export const BooksReviewContainer = styled("div", {
   height: "100%",
 
   overflow: "auto",
-  paddingRight: 6,
+  paddingRight: "$2",
 
   section: {
     display: "flex",
