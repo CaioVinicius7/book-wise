@@ -1,8 +1,9 @@
 import { styled } from "@/styles/stitches.config";
 
-export const CategoriesContainer = styled("div", {
+export const CategoriesContainer = styled("ul", {
   minHeight: 44,
 
+  listStyle: "none",
   overflowX: "auto",
 
   display: "flex",

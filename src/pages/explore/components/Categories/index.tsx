@@ -26,13 +26,14 @@ export function Categories({
         const isCategorySelected = category === selectedCategory;
 
         return (
-          <CategoryTag
-            key={category}
-            selected={isCategorySelected}
-            onClick={() => onSelectCategory(category)}
-          >
-            {category}
-          </CategoryTag>
+          <li key={category}>
+            <CategoryTag
+              selected={isCategorySelected}
+              onClick={() => onSelectCategory(category)}
+            >
+              {category}
+            </CategoryTag>
+          </li>
         );
       })}
     </CategoriesContainer>
