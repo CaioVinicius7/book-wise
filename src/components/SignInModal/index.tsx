@@ -16,7 +16,7 @@ export function SignInModal() {
       <SignInModalOverlay />
 
       <SignInModalContainer>
-        <SignInModalCloseButton asChild>
+        <SignInModalCloseButton>
           <X size={20} color="#8D95AF" />
         </SignInModalCloseButton>
 

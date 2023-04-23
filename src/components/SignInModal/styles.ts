@@ -55,6 +55,8 @@ export const SignInModalTitle = styled(Dialog.Title, {
 export const SignInModalCloseButton = styled(Dialog.Close, {
   cursor: "pointer",
 
+  display: "flex",
+
   position: "absolute",
   top: "1.5rem",
   right: "1.5rem"
