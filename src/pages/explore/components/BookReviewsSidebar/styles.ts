@@ -38,9 +38,9 @@ export const BookReviewsSidebarContainer = styled("section", {
 });
 
 export const CloseButton = styled("button", {
-  all: "unset",
-
   cursor: "pointer",
+
+  display: "flex",
 
   position: "absolute",
   top: "$5",
@@ -67,8 +67,6 @@ export const ReviewsHeader = styled("header", {
   },
 
   button: {
-    all: "unset",
-
     color: "$purple100",
     fontWeight: "$bold",
 

@@ -17,9 +17,9 @@ export const CategoriesContainer = styled("ul", {
 });
 
 export const CategoryTag = styled("button", {
-  all: "unset",
-
   padding: "$1 $4",
+
+  outline: "none",
 
   color: "$purple100",
   fontSize: "$md",
@@ -35,6 +35,12 @@ export const CategoryTag = styled("button", {
     color: "$gray100",
     backgroundColor: "$purple200",
     borderColor: "$purple200"
+  },
+
+  "&:focus": {
+    color: "$gray100",
+    backgroundColor: "$purple200",
+    borderColor: "$purple100"
   },
 
   variants: {

@@ -87,8 +87,6 @@ export const BookReviewCardContentHeader = styled("header", {
 });
 
 export const ShowMoreButton = styled("button", {
-  all: "unset",
-
   fontWeight: "$bold",
   fontSize: "$sm",
   color: "$purple100",

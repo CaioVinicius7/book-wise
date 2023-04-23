@@ -41,7 +41,6 @@ export const SearchInputContainer = styled("div", {
 
 export const Input = styled("input", {
   all: "unset",
-
   flex: 1,
 
   color: "$gray200",
@@ -53,11 +52,15 @@ export const Input = styled("input", {
 });
 
 export const SearchButton = styled("button", {
-  all: "unset",
-
   cursor: "pointer",
 
   svg: {
     color: "$gray500"
+  },
+
+  "&:focus": {
+    svg: {
+      color: "$green200"
+    }
   }
 });

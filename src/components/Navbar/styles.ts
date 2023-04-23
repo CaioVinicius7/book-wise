@@ -92,8 +92,6 @@ export const NavigationListItem = styled("li", {
 });
 
 const Button = styled("button", {
-  all: "unset",
-
   cursor: "pointer",
 
   color: "$gray200",

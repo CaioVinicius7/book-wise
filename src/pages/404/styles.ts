@@ -15,7 +15,8 @@ export const NotFoundContainer = styled("main", {
   },
 
   a: {
-    all: "unset",
+    color: "$gray200",
+    textDecoration: "none",
 
     padding: "$4",
     backgroundColor: "$gray600",

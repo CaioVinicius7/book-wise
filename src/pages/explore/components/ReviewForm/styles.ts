@@ -51,8 +51,6 @@ export const FormContainer = styled("form", {
 });
 
 export const FormButton = styled("button", {
-  all: "unset",
-
   padding: "$2",
 
   backgroundColor: "$gray600",

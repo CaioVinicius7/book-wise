@@ -21,5 +21,9 @@ export const Button = styled("button", {
   "&:hover": {
     filter: "brightness(0.8)",
     transition: "0.2s"
+  },
+
+  "&:focus": {
+    outline: "5px auto -webkit-focus-ring-color"
   }
 });

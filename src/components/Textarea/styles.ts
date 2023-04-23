@@ -20,7 +20,6 @@ export const TextareaElement = styled("textarea", {
   borderRadius: 4,
 
   "&:focus": {
-    outline: "none",
     border: "1px solid $gray400"
   },
 
