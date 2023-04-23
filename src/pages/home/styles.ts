@@ -11,7 +11,7 @@ export const HomeContainer = styled("main", {
   gap: 64
 });
 
-export const BooksReviewContainer = styled("main", {
+export const BooksReviewContainer = styled("div", {
   flex: 1,
   height: "100%",
 
