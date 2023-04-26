@@ -1,6 +1,6 @@
 import { styled } from "@/styles/stitches.config";
 
-export const HomeContainer = styled("main", {
+export const HomeContainer = styled("div", {
   height: "100%",
   paddingTop: "$10",
 
@@ -11,7 +11,7 @@ export const HomeContainer = styled("main", {
   gap: 64
 });
 
-export const BooksReviewContainer = styled("div", {
+export const BooksReviewContainer = styled("main", {
   flex: 1,
   height: "100%",
 
