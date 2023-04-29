@@ -9,6 +9,14 @@ const entrance = keyframes({
   }
 });
 
+export const BookReviewsSidebarOverlay = styled("div", {
+  position: "fixed",
+  width: "100vw",
+  height: "100vh",
+  inset: 0,
+  background: "rgba(0, 0, 0, 0.5)"
+});
+
 export const BookReviewsSidebarContainer = styled("section", {
   maxWidth: 660,
   width: "100%",
