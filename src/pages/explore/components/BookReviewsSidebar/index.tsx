@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X } from "phosphor-react";
 
-import { BookReviewCard } from "@/components/BookReviewCard";
+import { Comment } from "@/components/CommentCard";
 
 import {
   BookReviewsSidebarOverlay,
@@ -20,6 +20,9 @@ interface BookReviewsSidebarProps {
 
 export function BookReviewsSidebar({ onClose }: BookReviewsSidebarProps) {
   const [reviewFormIsVisible, setReviewFormIsVisible] = useState(false);
+
+  const comment =
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos, Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
 
   function handleChangeFormReviewVisibility() {
     setReviewFormIsVisible((state) => !state);
@@ -56,27 +59,20 @@ export function BookReviewsSidebar({ onClose }: BookReviewsSidebarProps) {
             <ReviewForm onCancelReview={handleChangeFormReviewVisibility} />
           )}
 
-          <BookReviewCard
-            avatarImageUrl="https://github.com/caiovinicius7.png"
-            userName="Caio Vinícius"
-            reviewedAt={new Date().toISOString()}
-            bookCoverImageUrl={`/o-hobbit.png`}
-            bookName="O Hobbit"
-            bookAuthor="J.R.R. Tolkien"
-            rating={4}
-            review="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos."
-          />
+          {Array(1, 2, 3).map((_, i) => {
+            return (
+              <Comment.Root key={i}>
+                <Comment.Header
+                  userName="Caio Vinícius"
+                  userAvatarImgUrl="https://github.com/caiovinicius7.png"
+                  userRating={5}
+                  commentedAt={new Date()}
+                />
 
-          <BookReviewCard
-            avatarImageUrl="https://github.com/caiovinicius7.png"
-            userName="Caio Vinícius"
-            reviewedAt={new Date().toISOString()}
-            bookCoverImageUrl={`/o-hobbit.png`}
-            bookName="O Hobbit"
-            bookAuthor="J.R.R. Tolkien"
-            rating={4}
-            review="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos."
-          />
+                <Comment.Content comment={comment} />
+              </Comment.Root>
+            );
+          })}
         </ReviewsContainer>
       </BookReviewsSidebarContainer>
     </>

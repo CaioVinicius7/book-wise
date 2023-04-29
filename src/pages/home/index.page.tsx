@@ -1,17 +1,21 @@
 import Head from "next/head";
+import { CaretRight } from "phosphor-react";
 
 import { DefaultLayout } from "@/components/DefaultLayout";
-import { BookReviewCard } from "@/components/BookReviewCard";
+import { Comment } from "@/components/CommentCard";
+import { CustomLinkContainer } from "@/components/CustomLink/styles";
 
 import { PopularBooksSidebar } from "./components/PopularBooksSidebar";
 
-import { BooksReviewContainer, HomeContainer } from "./styles";
+import {
+  BooksReviewContainer,
+  BooksReviewSectionHeader,
+  HomeContainer
+} from "./styles";
 
 export default function Home() {
-  const bookReview =
+  const comment =
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod quisquam consequuntur ex atque, laudantium reiciendis aliquid quos dolor, magni modi dicta provident illum cumque numquam voluptates quae, error dignissimos.";
-  const shortBookReview =
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
 
   return (
     <>
@@ -23,57 +27,55 @@ export default function Home() {
         <HomeContainer>
           <BooksReviewContainer>
             <section>
-              <header>
+              <BooksReviewSectionHeader>
+                <h2>Sua última leitura</h2>
+
+                <CustomLinkContainer href="/profile">
+                  Ver todos
+                  <CaretRight size={16} weight="bold" />
+                </CustomLinkContainer>
+              </BooksReviewSectionHeader>
+
+              <Comment.Root backgroundVariant="secondary">
+                <Comment.ContentWithBookDetailsRatingAndDate
+                  book={{
+                    name: "Código limpo",
+                    author: "Robert C. Martin",
+                    coverImgUrl: "/codigo-limpo.png"
+                  }}
+                  rating={5}
+                  comment={comment}
+                  commentedAt={new Date()}
+                />
+              </Comment.Root>
+            </section>
+
+            <section>
+              <BooksReviewSectionHeader>
                 <h2>Avaliações mais recentes</h2>
-              </header>
+              </BooksReviewSectionHeader>
 
-              <BookReviewCard
-                avatarImageUrl="https://github.com/caiovinicius7.png"
-                userName="Caio Vinícius"
-                reviewedAt={new Date().toISOString()}
-                bookCoverImageUrl={`/o-hobbit.png`}
-                bookName="O Hobbit"
-                bookAuthor="J.R.R. Tolkien"
-                rating={4}
-                review={bookReview}
-                animate
-              />
+              {Array(1, 2, 3, 4, 5).map((_, i) => {
+                return (
+                  <Comment.Root key={i}>
+                    <Comment.Header
+                      userName="Caio Vinícius"
+                      userAvatarImgUrl="https://github.com/caiovinicius7.png"
+                      userRating={5}
+                      commentedAt={new Date()}
+                    />
 
-              <BookReviewCard
-                avatarImageUrl="https://github.com/caiovinicius7.png"
-                userName="Caio Vinícius"
-                reviewedAt={new Date().toISOString()}
-                bookCoverImageUrl={`/codigo-limpo.png`}
-                bookName="Código limpo"
-                bookAuthor="Robert C. Martin"
-                rating={5}
-                review={shortBookReview}
-                animate
-              />
-
-              <BookReviewCard
-                avatarImageUrl="https://github.com/caiovinicius7.png"
-                userName="Caio Vinícius"
-                reviewedAt={new Date().toISOString()}
-                bookCoverImageUrl={`/o-hobbit.png`}
-                bookName="O Hobbit"
-                bookAuthor="J.R.R. Tolkien"
-                rating={4}
-                review={bookReview}
-                animate
-              />
-
-              <BookReviewCard
-                avatarImageUrl="https://github.com/caiovinicius7.png"
-                userName="Caio Vinícius"
-                reviewedAt={new Date().toISOString()}
-                bookCoverImageUrl={`/codigo-limpo.png`}
-                bookName="Código limpo"
-                bookAuthor="Robert C. Martin"
-                rating={5}
-                review={shortBookReview}
-                animate
-              />
+                    <Comment.ContentWithBookDetails
+                      book={{
+                        name: "Código limpo",
+                        author: "Robert C. Martin",
+                        coverImgUrl: "/codigo-limpo.png"
+                      }}
+                      comment={comment}
+                    />
+                  </Comment.Root>
+                );
+              })}
             </section>
           </BooksReviewContainer>
 
