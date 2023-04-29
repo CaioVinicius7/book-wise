@@ -1,5 +1,7 @@
-import Link from "next/link";
 import { CaretRight } from "phosphor-react";
+
+import { CustomLinkContainer } from "@/components/CustomLink/styles";
+
 import { PopularBookCard } from "../PopularBookCard";
 
 import { PopularBooksSidebarContainer } from "./styles";
@@ -10,10 +12,10 @@ export function PopularBooksSidebar() {
       <header>
         <h2>Livros populares</h2>
 
-        <Link href="/explore">
+        <CustomLinkContainer href="/explore">
           Ver todos
           <CaretRight size={16} weight="bold" />
-        </Link>
+        </CustomLinkContainer>
       </header>
 
       <ul>
