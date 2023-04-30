@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { CaretRight } from "phosphor-react";
 
 import { CustomLinkContainer } from "@/components/CustomLink/styles";
 
 import { TrendingBookCard } from "../TrendingBookCard";
 
-import { TrendingBooksSidebarContainer } from "./styles";
+import { TrendingBookList, TrendingBooksSidebarContainer } from "./styles";
 
 const TrendingBooks = [
   {
@@ -45,18 +46,20 @@ export function TrendingBooksSidebar() {
         </CustomLinkContainer>
       </header>
 
-      <ul>
+      <TrendingBookList>
         {TrendingBooks.map((book, i) => (
           <li key={i}>
-            <TrendingBookCard
-              title={book.title}
-              author={book.author}
-              rating={book.rating}
-              CoverImgUrl={book.CoverImgUrl}
-            />
+            <Link href={`/explore`}>
+              <TrendingBookCard
+                title={book.title}
+                author={book.author}
+                rating={book.rating}
+                CoverImgUrl={book.CoverImgUrl}
+              />
+            </Link>
           </li>
         ))}
-      </ul>
+      </TrendingBookList>
     </TrendingBooksSidebarContainer>
   );
 }

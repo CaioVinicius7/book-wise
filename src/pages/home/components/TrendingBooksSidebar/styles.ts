@@ -30,17 +30,28 @@ export const TrendingBooksSidebarContainer = styled("aside", {
     }
   },
 
-  ul: {
-    paddingRight: "$2",
-    overflowY: "auto",
-
-    listStyle: "none",
-    display: "flex",
-    flexDirection: "column",
-    gap: "$3"
-  },
-
   "@lg": {
     display: "none"
+  }
+});
+
+export const TrendingBookList = styled("ul", {
+  paddingRight: "$2",
+  overflowY: "auto",
+
+  listStyle: "none",
+  display: "flex",
+  flexDirection: "column",
+  gap: "$3",
+
+  li: {
+    a: {
+      all: "unset",
+      cursor: "pointer",
+
+      "&:focus > article": {
+        border: "2px solid $gray600"
+      }
+    }
   }
 });
