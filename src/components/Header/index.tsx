@@ -1,8 +1,17 @@
 import { ReactElement } from "react";
-import { Binoculars, ChartLineUp, User } from "phosphor-react";
+import { Binoculars, ChartLineUp, List, User } from "phosphor-react";
 
-import { HeaderContainer } from "./styles";
 import { SearchInput } from "../SearchInput";
+import { Navigation } from "../Navigation";
+
+import {
+  MenuArrow,
+  MenuContent,
+  MenuPortal,
+  MenuRoot,
+  MenuTrigger,
+  HeaderContainer
+} from "./styles";
 
 type HeaderVariants = "home" | "explore" | "profile";
 
@@ -47,6 +56,20 @@ export function Header({ variant }: HeaderProps) {
           }}
         />
       )}
+
+      <MenuRoot>
+        <MenuTrigger>
+          <List size={32} />
+        </MenuTrigger>
+
+        <MenuPortal>
+          <MenuContent>
+            <MenuArrow />
+
+            <Navigation />
+          </MenuContent>
+        </MenuPortal>
+      </MenuRoot>
     </HeaderContainer>
   );
 }

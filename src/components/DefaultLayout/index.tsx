@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Header } from "../Header";
-import { Navbar } from "../Navbar";
+import { Sidebar } from "../Sidebar";
 
 import { ContentContainer, DefaultLayoutContainer } from "./styles";
 
@@ -12,7 +12,7 @@ interface DefaultLayoutProps {
 export function DefaultLayout({ variant, children }: DefaultLayoutProps) {
   return (
     <DefaultLayoutContainer>
-      <Navbar />
+      <Sidebar />
 
       <ContentContainer page={variant}>
         <Header variant={variant} />
