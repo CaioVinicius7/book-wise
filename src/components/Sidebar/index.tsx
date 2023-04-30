@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { SignIn, SignOut } from "phosphor-react";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -5,10 +6,10 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { SidebarContainer, SignInButton, SignOutButton } from "./styles";
 
 import { SignInModal } from "../SignInModal";
+import { Navigation } from "../Navigation";
 import { Avatar } from "../Avatar";
 
 import logo from "../../assets/logo.svg";
-import { Navigation } from "../Navigation";
 
 export function Sidebar() {
   const userIsLogged = false;
@@ -17,7 +18,9 @@ export function Sidebar() {
     <SidebarContainer>
       <div>
         <header>
-          <Image src={logo} width={160} alt="Logo Book Wise" />
+          <Link href={"/home"}>
+            <Image src={logo} width={160} alt="Logo Book Wise" />
+          </Link>
         </header>
 
         <Navigation />
