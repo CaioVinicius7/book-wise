@@ -5,7 +5,7 @@ import { DefaultLayout } from "@/components/DefaultLayout";
 import { Comment } from "@/components/CommentCard";
 import { CustomLinkContainer } from "@/components/CustomLink/styles";
 
-import { PopularBooksSidebar } from "./components/PopularBooksSidebar";
+import { TrendingBooksSidebar } from "./components/TrendingBooksSidebar";
 
 import {
   BooksReviewContainer,
@@ -79,7 +79,7 @@ export default function Home() {
             </section>
           </BooksReviewContainer>
 
-          <PopularBooksSidebar />
+          <TrendingBooksSidebar />
         </HomeContainer>
       </DefaultLayout>
     </>

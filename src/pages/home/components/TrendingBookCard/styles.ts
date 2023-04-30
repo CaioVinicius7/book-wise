@@ -1,6 +1,6 @@
 import { styled } from "@/styles/stitches.config";
 
-export const PopularBookCardContainer = styled("div", {
+export const TrendingBookCardContainer = styled("div", {
   padding: "$4 $5",
 
   backgroundColor: "$gray700",
@@ -10,7 +10,7 @@ export const PopularBookCardContainer = styled("div", {
   gap: "$5"
 });
 
-export const PopularBookContent = styled("div", {
+export const TrendingBookCardContent = styled("div", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",

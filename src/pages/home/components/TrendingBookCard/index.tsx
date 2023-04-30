@@ -1,33 +1,33 @@
 import Image from "next/image";
 import { Rating } from "react-simple-star-rating";
 
-import { PopularBookCardContainer, PopularBookContent } from "./styles";
+import { TrendingBookCardContainer, TrendingBookCardContent } from "./styles";
 
-interface PopularBookCardProps {
+interface TrendingBookCardProps {
   title: string;
   author: string;
   rating: number;
-  bookCoverImage: string;
+  CoverImgUrl: string;
 }
 
-export function PopularBookCard({
+export function TrendingBookCard({
   title,
   author,
   rating,
-  bookCoverImage
-}: PopularBookCardProps) {
+  CoverImgUrl
+}: TrendingBookCardProps) {
   return (
-    <PopularBookCardContainer>
+    <TrendingBookCardContainer>
       <Image
         src={{
-          src: `/${bookCoverImage}`,
+          src: CoverImgUrl,
           width: 64,
           height: 94
         }}
         alt="Book cover"
       />
 
-      <PopularBookContent>
+      <TrendingBookCardContent>
         <header>
           <strong>{title}</strong>
           <span>{author}</span>
@@ -41,7 +41,7 @@ export function PopularBookCard({
             readonly
           />
         </footer>
-      </PopularBookContent>
-    </PopularBookCardContainer>
+      </TrendingBookCardContent>
+    </TrendingBookCardContainer>
   );
 }

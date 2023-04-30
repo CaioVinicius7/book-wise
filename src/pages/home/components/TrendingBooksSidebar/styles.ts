@@ -9,7 +9,7 @@ const entrance = keyframes({
   }
 });
 
-export const PopularBooksSidebarContainer = styled("aside", {
+export const TrendingBooksSidebarContainer = styled("aside", {
   width: 324,
 
   display: "flex",
