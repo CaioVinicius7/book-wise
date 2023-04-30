@@ -1,13 +1,18 @@
 import { styled } from "@/styles/stitches.config";
 
-export const TrendingBookCardContainer = styled("div", {
+export const TrendingBookCardContainer = styled("article", {
   padding: "$4 $5",
 
   backgroundColor: "$gray700",
+  border: "2px solid $gray700",
   borderRadius: 8,
 
   display: "flex",
-  gap: "$5"
+  gap: "$5",
+
+  "&:hover": {
+    border: "2px solid $gray600"
+  }
 });
 
 export const TrendingBookCardContent = styled("div", {
