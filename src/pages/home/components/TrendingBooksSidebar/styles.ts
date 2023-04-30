@@ -9,6 +9,15 @@ const entrance = keyframes({
   }
 });
 
+const opacity = keyframes({
+  from: {
+    opacity: 0
+  },
+  to: {
+    opacity: 1
+  }
+});
+
 export const TrendingBooksSidebarContainer = styled("aside", {
   width: 324,
 
@@ -16,7 +25,7 @@ export const TrendingBooksSidebarContainer = styled("aside", {
   flexDirection: "column",
   gap: "$4",
 
-  animation: `${entrance} 0.6s`,
+  animation: `${entrance} 0.6s, ${opacity} 1.2s`,
 
   header: {
     paddingRight: "$2",
