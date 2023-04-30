@@ -49,7 +49,7 @@ export function TrendingBooksSidebar() {
       <TrendingBookList>
         {TrendingBooks.map((book, i) => (
           <li key={i}>
-            <Link href={`/explore`}>
+            <Link href={`/explore?book=${book.title}`}>
               <TrendingBookCard
                 title={book.title}
                 author={book.author}

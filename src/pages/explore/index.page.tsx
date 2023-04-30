@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 
 import { DefaultLayout } from "@/components/DefaultLayout";
@@ -53,11 +54,21 @@ export default function Explore() {
   const [selectedCategory, setSelectedCategory] = useState("Tudo");
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
 
+  const router = useRouter();
+
   const sidebarShouldBeOpen = !!selectedBook;
 
   function deselectBook() {
     setSelectedBook(null);
   }
+
+  useEffect(() => {
+    const queryParams = router.query;
+
+    if (queryParams.book) {
+      setSelectedBook(queryParams.book.toString());
+    }
+  }, [router]);
 
   return (
     <>
