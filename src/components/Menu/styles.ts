@@ -9,9 +9,7 @@ export const MenuTrigger = styled(Popover.Trigger, {
 
   display: "none",
 
-  svg: {
-    color: "$gray100"
-  },
+  color: "$gray100",
 
   "@md": {
     display: "flex"

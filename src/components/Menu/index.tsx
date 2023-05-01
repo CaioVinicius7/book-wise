@@ -1,4 +1,4 @@
-import { List } from "phosphor-react";
+import { Turn as Hamburger } from "hamburger-react";
 
 import { Navigation } from "../Navigation";
 
@@ -14,7 +14,7 @@ export function Menu() {
   return (
     <MenuContainer>
       <MenuTrigger>
-        <List size={32} />
+        <Hamburger size={26} />
       </MenuTrigger>
 
       <MenuPortal>
