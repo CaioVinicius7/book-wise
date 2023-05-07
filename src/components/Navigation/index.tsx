@@ -19,7 +19,7 @@ export function Navigation() {
           Início
         </Link>
       </NavigationListItem>
-      <NavigationListItem currentPage={asPath === "/explore"}>
+      <NavigationListItem currentPage={asPath.includes("/explore")}>
         <Link href="/explore">
           <Binoculars size={DEFAULT_ICONS_SIZE} />
           Explorar
