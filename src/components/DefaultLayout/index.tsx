@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+
 import { Header } from "../Header";
 import { Sidebar } from "../Sidebar";
 
@@ -14,7 +15,7 @@ export function DefaultLayout({ variant, children }: DefaultLayoutProps) {
     <DefaultLayoutContainer>
       <Sidebar />
 
-      <ContentContainer page={variant}>
+      <ContentContainer>
         <Header variant={variant} />
 
         {children}
