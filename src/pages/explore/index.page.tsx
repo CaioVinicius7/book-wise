@@ -14,7 +14,7 @@ export interface BookSummary {
   title: string;
   author: string;
   rating: number;
-  coverImageUrl: string;
+  coverImgUrl: string;
 }
 
 const books: BookSummary[] = [
@@ -22,31 +22,31 @@ const books: BookSummary[] = [
     title: "Código Limpo",
     author: "Robert C. Martin",
     rating: 5,
-    coverImageUrl: "/codigo-limpo.png"
+    coverImgUrl: "/codigo-limpo.png"
   },
   {
     title: "Código Limpo",
     author: "Robert C. Martin",
     rating: 5,
-    coverImageUrl: "/codigo-limpo.png"
+    coverImgUrl: "/codigo-limpo.png"
   },
   {
     title: "Código Limpo",
     author: "Robert C. Martin",
     rating: 5,
-    coverImageUrl: "/codigo-limpo.png"
+    coverImgUrl: "/codigo-limpo.png"
   },
   {
     title: "Código Limpo",
     author: "Robert C. Martin",
     rating: 5,
-    coverImageUrl: "/codigo-limpo.png"
+    coverImgUrl: "/codigo-limpo.png"
   },
   {
     title: "Código Limpo",
     author: "Robert C. Martin",
     rating: 5,
-    coverImageUrl: "/codigo-limpo.png"
+    coverImgUrl: "/codigo-limpo.png"
   }
 ];
 
@@ -83,7 +83,7 @@ export default function Explore() {
             onSelectCategory={setSelectedCategory}
           />
 
-          <BookList bookList={books} onSelectBook={setSelectedBook} />
+          <BookList bookList={books} setSelectedBook={setSelectedBook} />
 
           {sidebarShouldBeOpen && <BookReviewsSidebar onClose={deselectBook} />}
         </ExploreContainer>

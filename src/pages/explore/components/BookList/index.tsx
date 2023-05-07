@@ -1,16 +1,21 @@
-import { BookSummaryCard } from "../BookSummaryCard";
+import { BookSummary } from "../BookSummaryCard";
 
 import { BooksNotFound } from "../BooksNotFound";
 
 import { BookListContainer } from "./styles";
 
-import type { BookSummary } from "../../index.page";
+interface BookSummary {
+  title: string;
+  author: string;
+  rating: number;
+  coverImgUrl: string;
+}
 interface BookListProps {
   bookList: BookSummary[];
-  onSelectBook(selectedBook: string): void;
+  setSelectedBook(selectedBook: string): void;
 }
 
-export function BookList({ bookList, onSelectBook }: BookListProps) {
+export function BookList({ bookList, setSelectedBook }: BookListProps) {
   const bookListIsEmpty = bookList.length === 0;
 
   if (bookListIsEmpty) {
@@ -19,16 +24,22 @@ export function BookList({ bookList, onSelectBook }: BookListProps) {
 
   return (
     <BookListContainer>
-      {bookList.map((book) => (
-        <BookSummaryCard
-          key={book.title}
-          title={book.title}
-          author={book.author}
-          rating={book.rating}
-          coverImageUrl={book.coverImageUrl}
-          onSelectBook={onSelectBook}
-        />
-      ))}
+      {bookList.map((book) => {
+        function onSelectBook() {
+          setSelectedBook(book.title);
+        }
+
+        return (
+          <BookSummary.Root key={book.title} onSelectBook={onSelectBook}>
+            <BookSummary.Content
+              title={book.title}
+              author={book.author}
+              rating={book.rating}
+              coverImgUrl={book.coverImgUrl}
+            />
+          </BookSummary.Root>
+        );
+      })}
     </BookListContainer>
   );
 }

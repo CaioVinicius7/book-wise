@@ -1,20 +1,35 @@
 import { styled } from "@/styles/stitches.config";
 
-export const BookSummaryCardContainer = styled("article", {
+export const BookSummaryCardContainer = styled("button", {
   padding: "$4 $5",
+
+  outline: "none",
+
   backgroundColor: "$gray700",
   borderRadius: 8,
+  border: "2px solid $gray700",
 
   variants: {
     isListVariant: {
       true: {
-        cursor: "pointer"
+        cursor: "pointer",
+
+        "&:hover, &:focus": {
+          border: "2px solid $gray600"
+        }
+      },
+      false: {
+        width: "100%"
       }
     }
+  },
+
+  defaultVariants: {
+    isListVariant: true
   }
 });
 
-export const BookSummaryCardContent = styled("div", {
+export const BookSummaryCardContentContainer = styled("div", {
   display: "flex",
   gap: "$5",
 
@@ -24,6 +39,8 @@ export const BookSummaryCardContent = styled("div", {
     justifyContent: "space-between",
     header: {
       strong: {
+        color: "$gray100",
+        fontSize: "$md",
         lineHeight: "$base"
       },
 
@@ -54,7 +71,7 @@ export const BookSummaryCardContent = styled("div", {
   }
 });
 
-export const BookSummaryCardFooter = styled("footer", {
+export const BookSummaryCardFooterContainer = styled("footer", {
   marginTop: "$10",
   padding: "$6 0 0 0",
 

@@ -12,7 +12,7 @@ import {
 } from "./styles";
 
 import { ReviewForm } from "../ReviewForm";
-import { BookSummaryCard } from "../BookSummaryCard";
+import { BookSummary } from "../BookSummaryCard";
 
 interface BookReviewsSidebarProps {
   onClose(): void;
@@ -41,13 +41,20 @@ export function BookReviewsSidebar({ onClose }: BookReviewsSidebarProps) {
           <X size={24} color="#8D95AF" />
         </CloseButton>
 
-        <BookSummaryCard
-          title="Código Limpo"
-          author="Robert C. Martin"
-          rating={5}
-          coverImageUrl="/codigo-limpo.png"
-          variant="sidebar"
-        />
+        <BookSummary.RootAsArticle>
+          <BookSummary.Content
+            title="Código Limpo"
+            author="Robert C. Martin"
+            rating={5}
+            coverImgUrl="/codigo-limpo.png"
+            variant="sidebar"
+          />
+
+          <BookSummary.Footer
+            categories={["Computação", "Educação", "Estudos", "Código"]}
+            pages={435}
+          />
+        </BookSummary.RootAsArticle>
 
         <ReviewsContainer>
           <ReviewsHeader>
