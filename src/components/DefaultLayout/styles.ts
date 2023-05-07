@@ -9,14 +9,14 @@ export const DefaultLayoutContainer = styled("div", {
 
 export const ContentContainer = styled("div", {
   flex: 1,
-  padding: "52px 96px",
+  padding: "3.25rem 6rem",
 
   "@lg": {
-    padding: "36px 24px"
+    padding: "0 1.5rem 3rem"
   },
 
   "@sm": {
-    padding: "36px 0px"
+    padding: "0 0 3rem"
   },
 
   variants: {
