@@ -1,7 +1,5 @@
 import { keyframes, styled } from "@/styles/stitches.config";
 
-``;
-
 const opacity = keyframes({
   from: {
     opacity: 0

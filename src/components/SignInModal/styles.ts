@@ -1,6 +1,15 @@
 import * as Dialog from "@radix-ui/react-dialog";
 
-import { styled } from "@/styles/stitches.config";
+import { keyframes, styled } from "@/styles/stitches.config";
+
+const opacity = keyframes({
+  from: {
+    opacity: 0
+  },
+  to: {
+    opacity: 1
+  }
+});
 
 export const SingInModalPortal = styled(Dialog.Portal, {});
 
@@ -9,7 +18,9 @@ export const SignInModalOverlay = styled(Dialog.Overlay, {
   width: "100vw",
   height: "100vh",
   inset: 0,
-  background: "rgba(0, 0, 0, 0.5)"
+  background: "rgba(0, 0, 0, 0.5)",
+
+  animation: `${opacity} 0.2s`
 });
 
 export const SignInModalContainer = styled(Dialog.Content, {
@@ -27,6 +38,8 @@ export const SignInModalContainer = styled(Dialog.Content, {
   display: "flex",
   flexDirection: "column",
   gap: "$10",
+
+  animation: `${opacity} 0.2's`,
 
   div: {
     display: "flex",
