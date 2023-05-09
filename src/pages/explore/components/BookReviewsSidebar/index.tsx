@@ -51,7 +51,7 @@ export function BookReviewsSidebar({ onClose }: BookReviewsSidebarProps) {
           />
 
           <BookSummary.Footer
-            categories={["Computação", "Educação", "Estudos", "Código"]}
+            categories={["Computação", "Educação"]}
             pages={435}
           />
         </BookSummary.RootAsArticle>

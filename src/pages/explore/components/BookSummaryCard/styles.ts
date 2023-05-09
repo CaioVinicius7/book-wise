@@ -101,9 +101,5 @@ export const BookSummaryCardFooterContainer = styled("footer", {
         lineHeight: "$short"
       }
     }
-  },
-
-  "@media(max-width: 400px)": {
-    gridTemplateColumns: "1fr"
   }
 });
