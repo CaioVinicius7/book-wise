@@ -1,4 +1,15 @@
-import { styled } from "@/styles/stitches.config";
+import { keyframes, styled } from "@/styles/stitches.config";
+
+``;
+
+const opacity = keyframes({
+  from: {
+    opacity: 0
+  },
+  to: {
+    opacity: 1
+  }
+});
 
 export const CategoriesContainer = styled("ul", {
   minHeight: 44,
@@ -10,6 +21,8 @@ export const CategoriesContainer = styled("ul", {
   alignItems: "center",
   justifyContent: "flex-start",
   gap: "$3",
+
+  animation: `${opacity} 2.6s`,
 
   "&::-webkit-scrollbar": {
     height: 6

@@ -13,6 +13,10 @@ export const ContentContainer = styled("div", {
 
   overflow: "hidden",
 
+  "@xl": {
+    padding: "0 1.5rem 3rem"
+  },
+
   "@lg": {
     padding: "0 1.5rem 3rem"
   },
