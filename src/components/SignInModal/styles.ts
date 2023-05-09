@@ -39,7 +39,7 @@ export const SignInModalContainer = styled(Dialog.Content, {
   flexDirection: "column",
   gap: "$10",
 
-  animation: `${opacity} 0.2's`,
+  animation: `${opacity} 0.1s`,
 
   div: {
     display: "flex",
