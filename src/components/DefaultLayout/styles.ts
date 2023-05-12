@@ -18,10 +18,10 @@ export const ContentContainer = styled("div", {
   },
 
   "@lg": {
-    padding: "0 1.5rem 3rem"
+    padding: "0 1.5rem 3.5rem"
   },
 
   "@sm": {
-    padding: "0 0 3rem"
+    padding: "0 0 3.5rem"
   }
 });
