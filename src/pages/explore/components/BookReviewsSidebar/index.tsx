@@ -37,6 +37,7 @@ export function BookReviewsSidebar({ onClose }: BookReviewsSidebarProps) {
           title="Fechar barra lateral"
           type="button"
           onClick={onClose}
+          autoFocus
         >
           <X size={24} color="#8D95AF" />
         </CloseButton>
