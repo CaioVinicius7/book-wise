@@ -47,6 +47,66 @@ const books: BookSummary[] = [
     author: "Robert C. Martin",
     rating: 5,
     coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
+  },
+  {
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    rating: 5,
+    coverImgUrl: "/codigo-limpo.png"
   }
 ];
 

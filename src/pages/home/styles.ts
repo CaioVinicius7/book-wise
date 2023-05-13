@@ -24,9 +24,6 @@ export const HomeContainer = styled("div", {
   height: "100%",
   paddingTop: "$10",
 
-  overflow: "hidden",
-  overflowX: "hidden",
-
   display: "flex",
   gap: 64
 });
@@ -35,7 +32,6 @@ export const BooksReviewContainer = styled("main", {
   flex: 1,
   height: "100%",
 
-  overflow: "auto",
   paddingRight: "$2",
 
   display: "grid",

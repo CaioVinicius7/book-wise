@@ -4,17 +4,17 @@ import navbarBackgroundImage from "../../assets/navbar-background.png";
 
 export const SidebarContainer = styled("section", {
   maxWidth: 232,
-  height: "100%",
+  height: "calc(100vh - 2.5rem)",
   background: "$gray700",
   borderRadius: "$md",
   backgroundImage: `url(${navbarBackgroundImage.src})`,
   backgroundPosition: "center",
   backgroundSize: "cover",
 
-  paddingTop: 40,
-  paddingLeft: 52,
-  paddingRight: 52,
-  paddingBottom: 24,
+  padding: "$10 52px $6",
+
+  position: "sticky",
+  top: "$5",
 
   display: "flex",
   flexDirection: "column",

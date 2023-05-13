@@ -2,16 +2,14 @@ import { styled } from "@/styles/stitches.config";
 
 export const DefaultLayoutContainer = styled("div", {
   padding: "$5",
-  height: "100vh",
 
-  display: "flex"
+  display: "flex",
+  overflowX: "clip"
 });
 
 export const ContentContainer = styled("div", {
-  flex: 1,
+  width: "stretch",
   padding: "3.25rem 6rem",
-
-  overflow: "hidden",
 
   "@xl": {
     padding: "0 1.5rem 3rem"

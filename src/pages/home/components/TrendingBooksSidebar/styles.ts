@@ -19,7 +19,11 @@ const opacity = keyframes({
 });
 
 export const TrendingBooksSidebarContainer = styled("aside", {
-  width: 324,
+  minWidth: 324,
+  height: "fit-content",
+
+  position: "sticky",
+  top: "$5",
 
   display: "flex",
   flexDirection: "column",
