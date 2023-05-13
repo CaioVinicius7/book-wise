@@ -2,6 +2,7 @@ import { styled } from "@/styles/stitches.config";
 
 export const SearchInputContainer = styled("div", {
   padding: "0.875rem $5",
+  maxHeight: 48,
 
   border: "1px solid $gray500",
   borderRadius: 4,
