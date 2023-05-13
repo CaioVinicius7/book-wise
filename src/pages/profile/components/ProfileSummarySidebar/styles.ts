@@ -23,7 +23,7 @@ export const ProfileSummarySidebarContainer = styled("aside", {
   height: "fit-content",
 
   position: "sticky",
-  top: 0,
+  top: "$5",
 
   display: "flex",
   flexDirection: "column",
@@ -34,7 +34,9 @@ export const ProfileSummarySidebarContainer = styled("aside", {
   animation: `${entrance} 0.6s, ${opacity} 1.2s`,
 
   "@lg": {
-    display: "none"
+    position: "unset",
+    borderLeft: 0,
+    borderBottom: "1px solid $gray700"
   }
 });
 
@@ -66,7 +68,15 @@ export const Divider = styled("hr", {
 
   background: "$gradient-horizontal",
 
-  margin: "$8 auto"
+  margin: "$8 auto",
+
+  "@md": {
+    margin: "$6 auto"
+  },
+
+  "@sm": {
+    margin: "$4 auto"
+  }
 });
 
 export const ProfileSummarySidebarContent = styled("section", {
@@ -74,6 +84,10 @@ export const ProfileSummarySidebarContent = styled("section", {
 
   svg: {
     color: "$green100"
+  },
+
+  "@lg": {
+    padding: "$5 1.25rem"
   }
 });
 
@@ -100,5 +114,18 @@ export const StatsList = styled("ul", {
       fontSize: "$sm",
       lineHeight: "$short"
     }
+  },
+
+  "@lg": {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center"
+  },
+
+  "@base": {
+    display: "grid",
+    justifyItems: "center",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gap: "$4"
   }
 });

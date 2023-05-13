@@ -24,10 +24,12 @@ export const ProfileContainer = styled("div", {
   height: "100%",
   paddingTop: "$10",
 
-  overflowX: "hidden",
-
   display: "flex",
-  gap: 64
+  gap: 64,
+
+  "@lg": {
+    flexDirection: "column-reverse"
+  }
 });
 
 export const BooksReviewContainer = styled("main", {
