@@ -1,5 +1,12 @@
-import { DefaultLayout } from "@/components/DefaultLayout";
 import Head from "next/head";
+
+import { DefaultLayout } from "@/components/DefaultLayout";
+import { SearchInput } from "@/components/SearchInput";
+
+import { ProfileSummarySidebar } from "./components/ProfileSummarySidebar";
+import { ReviewsPerMonth } from "./components/ReviewsPerMonth";
+
+import { BooksReviewContainer, ProfileContainer } from "./styles";
 
 export default function Profile() {
   return (
@@ -9,7 +16,19 @@ export default function Profile() {
       </Head>
 
       <DefaultLayout variant="profile">
-        <h1>Profile</h1>
+        <ProfileContainer>
+          <BooksReviewContainer>
+            <SearchInput
+              onSearch={() => {}}
+              sizeVariant="body"
+              placeholder="Buscar livro avaliado"
+            />
+
+            <ReviewsPerMonth />
+          </BooksReviewContainer>
+
+          <ProfileSummarySidebar />
+        </ProfileContainer>
       </DefaultLayout>
     </>
   );
