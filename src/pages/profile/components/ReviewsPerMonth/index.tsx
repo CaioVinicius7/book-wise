@@ -1,7 +1,7 @@
 import { Comment } from "@/components/CommentCard";
 
 import {
-  BooksReviewSectionHeader,
+  MonthReviewsHeader,
   MonthReviews,
   ReviewsPerMonthContainer
 } from "./styles";
@@ -10,9 +10,9 @@ export function ReviewsPerMonth() {
   return (
     <ReviewsPerMonthContainer>
       <MonthReviews>
-        <BooksReviewSectionHeader>
+        <MonthReviewsHeader>
           <h2>Há 2 dias</h2>
-        </BooksReviewSectionHeader>
+        </MonthReviewsHeader>
 
         <Comment.Root>
           <Comment.contentWithBookDetailsAndRating
@@ -42,9 +42,9 @@ export function ReviewsPerMonth() {
       </MonthReviews>
 
       <MonthReviews>
-        <BooksReviewSectionHeader>
+        <MonthReviewsHeader>
           <h2>Há 1 semana</h2>
-        </BooksReviewSectionHeader>
+        </MonthReviewsHeader>
 
         <Comment.Root>
           <Comment.contentWithBookDetailsAndRating
@@ -60,9 +60,9 @@ export function ReviewsPerMonth() {
       </MonthReviews>
 
       <MonthReviews>
-        <BooksReviewSectionHeader>
+        <MonthReviewsHeader>
           <h2>Há 2 meses</h2>
-        </BooksReviewSectionHeader>
+        </MonthReviewsHeader>
 
         <Comment.Root>
           <Comment.contentWithBookDetailsAndRating
