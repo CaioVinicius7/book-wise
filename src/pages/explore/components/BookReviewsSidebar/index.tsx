@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { X } from "phosphor-react";
 
 import { Comment } from "@/components/CommentCard";
@@ -27,6 +27,14 @@ export function BookReviewsSidebar({ onClose }: BookReviewsSidebarProps) {
   function handleChangeFormReviewVisibility() {
     setReviewFormIsVisible((state) => !state);
   }
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
 
   return (
     <>
