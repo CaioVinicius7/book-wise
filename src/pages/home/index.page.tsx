@@ -3,7 +3,7 @@ import { CaretRight } from "phosphor-react";
 
 import { DefaultLayout } from "@/components/DefaultLayout";
 import { Comment } from "@/components/CommentCard";
-import { CustomLinkContainer } from "@/components/CustomLink/styles";
+import { CustomLink } from "@/components/CustomLink";
 
 import { TrendingBooksSidebar } from "./components/TrendingBooksSidebar";
 
@@ -30,10 +30,10 @@ export default function Home() {
               <BooksReviewSectionHeader>
                 <h2>Sua última leitura</h2>
 
-                <CustomLinkContainer href="/profile">
+                <CustomLink href="/profile">
                   Ver todos
                   <CaretRight size={16} weight="bold" />
-                </CustomLinkContainer>
+                </CustomLink>
               </BooksReviewSectionHeader>
 
               <Comment.Root backgroundVariant="secondary">
