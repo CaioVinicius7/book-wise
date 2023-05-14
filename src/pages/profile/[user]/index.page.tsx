@@ -12,12 +12,12 @@ import { BooksReviewContainer, ProfileContainer } from "../styles";
 export default function Profile() {
   const router = useRouter();
 
-  const { user } = router.query;
+  const user = String(router.query.user);
 
   return (
     <>
       <Head>
-        <title>Book Wise | {user}</title>
+        <title>{`Book Wise | ${user}`}</title>
       </Head>
 
       <DefaultLayout variant="profile" returnable>
