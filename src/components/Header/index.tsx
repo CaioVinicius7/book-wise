@@ -1,8 +1,10 @@
 import { ReactElement } from "react";
+import { useRouter } from "next/router";
 import { Binoculars, ChartLineUp, User } from "phosphor-react";
 
 import { SearchInput } from "../SearchInput";
 import { Menu } from "../Menu";
+import { GoBackButton } from "../GoBackButton";
 
 import { HeaderContainer } from "./styles";
 
@@ -15,6 +17,7 @@ interface HeaderOptions {
 
 interface HeaderProps {
   variant: HeaderVariants;
+  returnable?: boolean;
 }
 
 const headerVariant: Record<HeaderVariants, HeaderOptions> = {
@@ -32,13 +35,19 @@ const headerVariant: Record<HeaderVariants, HeaderOptions> = {
   }
 };
 
-export function Header({ variant }: HeaderProps) {
+export function Header({ variant, returnable }: HeaderProps) {
+  const router = useRouter();
+
   return (
     <HeaderContainer placeholder="Buscar livro ou autor">
-      <h1>
-        {headerVariant[variant].icon}
-        {headerVariant[variant].title}
-      </h1>
+      {returnable ? (
+        <GoBackButton onClick={() => router.back()} withText />
+      ) : (
+        <h1>
+          {headerVariant[variant].icon}
+          {headerVariant[variant].title}
+        </h1>
+      )}
 
       {variant === "explore" && (
         <SearchInput

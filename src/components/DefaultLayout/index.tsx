@@ -7,16 +7,21 @@ import { ContentContainer, DefaultLayoutContainer } from "./styles";
 
 interface DefaultLayoutProps {
   variant: "home" | "explore" | "profile";
+  returnable?: boolean;
   children: ReactNode;
 }
 
-export function DefaultLayout({ variant, children }: DefaultLayoutProps) {
+export function DefaultLayout({
+  variant,
+  returnable,
+  children
+}: DefaultLayoutProps) {
   return (
     <DefaultLayoutContainer>
       <Sidebar />
 
       <ContentContainer>
-        <Header variant={variant} />
+        <Header variant={variant} returnable={returnable} />
 
         {children}
       </ContentContainer>
