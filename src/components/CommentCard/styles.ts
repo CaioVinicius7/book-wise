@@ -33,6 +33,16 @@ export const CommentCardHeaderUserData = styled("div", {
   div: {
     display: "block",
 
+    a: {
+      all: "unset",
+
+      cursor: "pointer",
+
+      "&:focus": {
+        outline: "5px auto -webkit-focus-ring-color"
+      }
+    },
+
     strong: {
       fontWeight: "$regular",
       lineHeight: "$base"

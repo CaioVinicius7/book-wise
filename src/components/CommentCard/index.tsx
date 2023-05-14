@@ -2,6 +2,7 @@ import { ReactNode, useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import dayjs from "dayjs";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Avatar } from "../Avatar";
 
@@ -55,7 +56,9 @@ function CommentCardHeader({
         <Avatar imageUrl={userAvatarImgUrl} size="md" />
 
         <div>
-          <strong>{userName}</strong>
+          <Link href={`/profile/${userName}`} prefetch={false}>
+            <strong>{userName}</strong>
+          </Link>
           <time>{commentDistanceToNow}</time>
         </div>
       </CommentCardHeaderUserData>
